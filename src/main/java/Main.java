@@ -15,6 +15,7 @@ public class Main {
         try {
             Metadata metadata = ImageMetadataReader.readMetadata(jpegFile);
             for (Directory directory : metadata.getDirectories()) {
+                System.out.println("Directory; " +  directory.toString());
                 for (Tag tag : directory.getTags()) {
                     System.out.println(tag);
                 }
